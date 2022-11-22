@@ -1,23 +1,16 @@
+import "../main.css";
 
-import { useState, useEffect } from 'react'
 
-
-function Card() {
-  const [card, setCard] = useState(0)
-
-  useEffect(() =>{
-    fetch("./json_schema.json", {
-        headers: {
-            Accept: "application/json"
-        }
-    }).then(res => res.json())
-      .then(res => {
-        console.log(res)
-        setCard(res)
-      })
-  }, [])
+function Card(props) {
+  console.log(props)
   return (
-    <div>Oi</div>
+    <div className='card'>
+        <div className='titulo'> {props.name} </div>
+        <img src={props.imagem} className='imagem'/>
+        <div className='tipo'>
+          {props.type}
+        </div>
+    </div>    
   )
 }
 

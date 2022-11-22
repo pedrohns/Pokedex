@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    border: 5px solid black;
+    width: 90%;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.card{
+    padding: 5px;
+    height: 100%;
+    width: 150px;
+    /*border: 2px solid blue;*/
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin:3px 3px 3px 3px;
+}
+
+.card:hover{
+    background-color: #EC7DFF;
+    border: hidden;
+    color:#ffff;
+}
+
+.titulo, .tipo{
+    text-align: center;
+}
+.imagem{
+    height: 150px;
+    width: 150px;
+}

@@ -1,53 +1,55 @@
-{
-    "name": "ditto",
-    "id": 132,
-    "sprites": {
-        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png"
-    },
-    "stats": [
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "hp"
-            }
+{   
+    "first":{
+        "name": "ditto",
+        "id": 132,
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
         },
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "attack"
+        "stats": [
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "hp"
+                }
+            },
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "attack"
+                }
+            },
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "defense"
+                }
+            },
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "special-attack"
+                }
+            },
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "special-defense"
+                }
+            },
+            {
+                "base_stat": 48,
+                "stat": {
+                    "name": "speed"
+                }
             }
-        },
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "defense"
+        ],
+        "types": [
+            {
+                "type":{
+                    "name": "normal"
+                }
             }
-        },
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "special-attack"
-            }
-        },
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "special-defense"
-            }
-        },
-        {
-            "base_stat": 48,
-            "stat": {
-                "name": "speed"
-            }
-        }
-    ],
-    "types": [
-        {
-            "type":{
-                "name": "normal"
-            }
-        }
-    ],
-    "weight": 40
+        ],
+        "weight": 40
+    }
 }
