@@ -1,4 +1,4 @@
-{   
+{  
     "first":{
         "name": "ditto",
         "id": 132,
@@ -51,5 +51,111 @@
             }
         ],
         "weight": 40
-    }
+    },
+    "second":{
+        "name": "lickitung",
+        "id": 108,
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"
+        },
+        "stats": [
+            {
+                "base_stat": 90,
+                "stat": {
+                    "name": "hp"
+                }
+            },
+            {
+                "base_stat": 55,
+                "stat": {
+                    "name": "attack"
+                }
+            },
+            {
+                "base_stat": 75,
+                "stat": {
+                    "name": "defense"
+                }
+            },
+            {
+                "base_stat": 60,
+                "stat": {
+                    "name": "special-attack"
+                }
+            },
+            {
+                "base_stat": 75,
+                "stat": {
+                    "name": "special-defense"
+                }
+            },
+            {
+                "base_stat": 30,
+                "stat": {
+                    "name": "speed"
+                }
+            }
+        ],
+        "types": [
+            {
+                "type":{
+                    "name": "normal"
+                }
+            }
+        ],
+        "weight": 655
+    },
+    "third":{
+        "name": "charmander",
+        "id": 4,
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+        },
+        "stats": [
+            {
+                "base_stat": 39,
+                "stat": {
+                    "name": "hp"
+                }
+            },
+            {
+                "base_stat": 52,
+                "stat": {
+                    "name": "attack"
+                }
+            },
+            {
+                "base_stat": 43,
+                "stat": {
+                    "name": "defense"
+                }
+            },
+            {
+                "base_stat": 60,
+                "stat": {
+                    "name": "special-attack"
+                }
+            },
+            {
+                "base_stat": 50,
+                "stat": {
+                    "name": "special-defense"
+                }
+            },
+            {
+                "base_stat": 65,
+                "stat": {
+                    "name": "speed"
+                }
+            }
+        ],
+        "types": [
+            {
+                "type":{
+                    "name": "fire"
+                }
+            }
+        ],
+        "weight": 85
+    } 
 }

@@ -1,0 +1,91 @@
+.card{
+    padding: 5px;
+    height: 100%;
+    width: 150px;
+    /*border: 2px solid blue;*/
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin:3px 3px 3px 3px;
+    /*background-color: #FEBFFF;*/
+}
+
+.card-red{
+    background-color: #F70D0C;
+}
+
+.card-red:hover{
+    background-color: #f07a7a;
+    border: hidden;
+    color:#ffff;
+}
+/* 2 */
+.card-green{
+    background-color: #6EF70C;
+}
+
+.card-green:hover{
+    background-color: #449907;
+    border: hidden;
+    color:#ffff;
+}
+/* 3 */
+.card-blue{
+    background-color: #0754F7;
+}
+
+.card-blue:hover{
+    background-color: #163579;
+    border: hidden;
+    color:#ffff;
+}
+/* 4 */
+.card-yellow{
+    background-color: #E0D301;
+}
+
+.card-yellow:hover{
+    background-color: #f5ec48;
+    border: hidden;
+    color:#ffff;
+}
+/* 5 */
+.card-orange{
+    background-color: #E6D3CD;
+}
+
+.card-orange:hover{
+    background-color: #db7658;
+    border: hidden;
+    color:#ffff;
+}
+/* 6 */
+.card-purple{
+    background-color: #D85EE6;
+}
+
+.card-purple:hover{
+    background-color: #e49dec;
+    border: hidden;
+    color:#ffff;
+}
+/* 7 */
+.card-lille{
+    background-color: #C05BFC;
+}
+
+.card-lille:hover{
+    background-color: #3f095e;
+    border: hidden;
+    color:#ffff;
+}
+/* 8 */
+.card-sunny{
+    background-color: #e6c844;
+}
+
+.card-sunny:hover{
+    background-color: #b4a666;
+    border: hidden;
+    color:#ffff;
+}
