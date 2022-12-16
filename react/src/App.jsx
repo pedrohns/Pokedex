@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
 import './main.css';
 import Card from './Components/Card.jsx';
 import Button from './Components/Button.jsx';
@@ -10,12 +9,17 @@ import Modal from './Components/Modal';
 function App() {
   const [cards, setCard] = useState([])
   const [modal, setOpen] = useState(false)
+  const [pokeStatus, setDetail] = useState([])
 
-  const handlingClick = () =>{
+  const handlingClick = (status = null) =>{
     setOpen(!modal)
-    //console.log(modal)
+    if(status !== null){
+      fetch("http://localhost:3000/getDetails?rowid="+status.rowid)
+      .then(res => res.json())
+      .then(res => setDetail(res.resp))
+    }
   }
-  
+
   useEffect(() =>{
     fetch("http://localhost:3000/getPokemon", {
         headers: {
@@ -38,7 +42,7 @@ function App() {
     <div className='container'>
       { cards  && cards.map((value) => {
         return(
-          <button onClick={() => handlingClick()}>
+          <button onClick={() => handlingClick(value)}>
             <Card name={value.nome} 
                   type={value.tipo} 
                   imagem={value.imagem}
@@ -51,7 +55,9 @@ function App() {
       }
       
     </div>
-    <Modal isOpen={modal} reset={() => handlingClick()}/>
+    <Modal isOpen={modal} reset={() => handlingClick()}
+           pokemon={pokeStatus}
+    />
    </>
   )
 }

@@ -1,6 +1,7 @@
 const createConnection = require('../utils/sqlConnect')
 let sqlQuery = require('../utils/sqlQuery')
 var fetch = require('node-fetch');
+const { response } = require('express');
 var connectionBank = createConnection();
 var pokemonDao = new sqlQuery(connectionBank);
 
@@ -32,6 +33,20 @@ module.exports = function(app){
     } else {
         response.send({resp:'Erro:111'})
     }
+    })
+
+    app.get("/getDetails", async function(req, response){
+        const result = await pokemonDao.select(`select *, case when ( tipo = 'fire') then  1  when ( tipo = 'grass') then  2 
+        when ( tipo = 'water') then  3 when ( tipo = 'electric') then  4 when ( tipo = 'normal') then  5
+        when ( tipo = 'psychic') then  6 when ( tipo = 'ghost') then  7 else 8   
+         end as seletor from pokemons where rowid = ${req.query.rowid}`)
+       
+        if (result.length > 0) {
+            response.send({resp:result[0]})
+        } else {
+            response.send({resp:'Erro:222'})
+        }
+        
     })
 
     async function insertData(param){

@@ -47,7 +47,7 @@
 .card-yellow:hover{
     background-color: #f5ec48;
     border: hidden;
-    color:#ffff;
+    color:rgb(160, 132, 132);
 }
 /* 5 */
 .card-orange{

@@ -1,0 +1,50 @@
+.modal-card{
+    width: 700px;
+    height: 600px;
+    position: relative;
+    border-radius: 5px;
+}
+
+/* 1 */
+.modal-card-red{
+    background-color: #F70D0C;
+}
+
+/* 2 */
+.modal-card-green{
+    background-color: #6EF70C;
+}
+
+/* 3 */
+.modal-card-blue{
+    background-color: #0754F7;
+}
+
+/* 4 */
+.modal-card-yellow{
+    background-color: #E0D301;
+}
+
+/* 5 */
+.modal-card-orange{
+    background-color: #E6D3CD;
+}
+
+
+/* 6 */
+.modal-card-purple{
+    background-color: #D85EE6;
+}
+
+
+/* 7 */
+.modal-card-lille{
+    background-color: #C05BFC;
+}
+
+
+/* 8 */
+.modal-card-sunny{
+    background-color: #e6c844;
+}
+
