@@ -6,6 +6,7 @@ import Modal from './Components/Modal';
 
 
 
+
 function App() {
   const [cards, setCard] = useState([])
   const [modal, setOpen] = useState(false)

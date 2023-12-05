@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.jade {
+    color: whitesmoke;
+}
+.texto {
+    color: black;
+}
+
 body{
     background-color: #3b3d3f;
 }
