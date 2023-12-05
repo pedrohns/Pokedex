@@ -49,11 +49,16 @@ module.exports = function(app){
         
     })
 
+    function getPathGifPokemon(idPokemon){
+        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${idPokemon}.gif`;
+    }
+
     async function insertData(param){
         var obj = {
             "rowid": "'"+param.id+"'",
             "nome":"'"+param.name+"'",
             "imagem":"'"+param.sprites.front_default+"'",
+            "gif":"'"+ getPathGifPokemon(param.id) +"'",
             "hp": param.stats[0].base_stat,
             "attack":param.stats[1].base_stat,
             "defense":param.stats[2].base_stat,
@@ -66,39 +71,4 @@ module.exports = function(app){
         await pokemonDao.insert(`insert into pokemons (${Object.keys(obj)}) values (${Object.values(obj) })`)
     }
 
-    /*
-    app.get("/getPokemon", function(req,response,next){
-        var arrayAux = [];
-        var add;
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=2&offset=0", {
-            headers: {
-                Accept: "application/json"
-            }, method:'GET'
-        }).then(res => res.json())
-          .then(res =>{
-            res.results.map((values) =>{
-                fetch(values.url, { method: 'GET'})
-                .then(resp => resp.json())
-                .then(resp =>{
-                   //trocar isso para inserção direto
-                    arrayAux.push({
-                        "id": resp.id,
-                        "name":resp.name,
-                        "imagem":resp.sprites.front_default,
-                        "hp": resp.stats[0].base_stat,
-                        "attack":resp.stats[1].base_stat,
-                        "defense":resp.stats[2].base_stat,
-                        "special-attack":resp.stats[3].base_stat,
-                        "special-defense":resp.stats[4].base_stat,
-                        "speed":resp.stats[5].base_stat,
-                        "type":resp.types[0].type.name,
-                        "weight": resp.weight
-                    })
-                   
-                })
-            })
-            response.send(res.results[0].name);
-        })
-    })
-    */
 }

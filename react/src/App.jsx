@@ -3,6 +3,8 @@ import './main.css';
 import Card from './Components/Card.jsx';
 import Button from './Components/Button.jsx';
 import Modal from './Components/Modal';
+import {toUpperCase}  from './utils/utilCustom.jsx';
+
 
 
 
@@ -43,11 +45,13 @@ function App() {
       { cards  && cards.map((value) => {
         return(
           <button onClick={() => handlingClick(value)}>
-            <Card name={value.nome} 
+            <Card 
+                  name={toUpperCase(value.nome)} 
                   type={value.tipo} 
                   imagem={value.imagem}
                   id={value.rowid}
                   color={value.seletor}
+                  gif={value.gif}
             ></Card>
           </button>
         )
