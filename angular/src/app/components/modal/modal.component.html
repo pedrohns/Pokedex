@@ -7,9 +7,10 @@
 
   <mat-dialog-content>
     <nav>
-      <h2 class="title-detail">{{ upperFirstLetter(getDetailPokemon()?.nome) }}</h2>
       <div class="modal-details-container">
+      <h2 class="title-detail">{{ upperFirstLetter(getDetailPokemon()?.nome) }}</h2>
         <img class="imagem-detail" [src]="getDetailPokemon()?.imagem" />
+      </div>
         <div class="modal-details">
           HP:{{getDetailPokemon()?.hp}}
           <br />
@@ -27,9 +28,6 @@
           Special Defense:{{getDetailPokemon()?.special_defense}}
           <br />
         </div>
-      </div>
-      
-      
     </nav>
   </mat-dialog-content>
   
