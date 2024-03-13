@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit, signal } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { IDetailList } from '@interfaces/IResponsesAPI.interface';
+import { toUpperCase } from '@utils/utilCustom';
 @Component({
   selector: 'app-modal',
   standalone: true,
@@ -22,6 +23,10 @@ export class ModalComponent implements OnInit{
 
   closeModal(){
     return this._modalRef.close();
+  }
+
+  upperFirstLetter(nome: string | undefined):string {
+   return toUpperCase(nome);
   }
 
 }

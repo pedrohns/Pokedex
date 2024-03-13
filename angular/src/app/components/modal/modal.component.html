@@ -1,5 +1,5 @@
 <header>
-    <h2 mat-dialog-title>{{ getDetailPokemon()?.nome }}</h2>
+    <!-- <h2 mat-dialog-title>{{ upperFirstLetter(getDetailPokemon()?.nome) }}</h2> -->
     <button (click)="closeModal()">
       <img src="../../../assets/icons/dialog/close.svg" alt="Botão para fechar dialog" />
     </button>
@@ -7,23 +7,28 @@
 
   <mat-dialog-content>
     <nav>
-      <img [src]="getDetailPokemon()?.imagem" />
-      <div class="modal-details">
-        HP:{{getDetailPokemon()?.hp}}
-        <br />
-        Attack:{{getDetailPokemon()?.attack}}
-        <br />
-        Defense:{{getDetailPokemon()?.defense}}
-        <br />
-        Speed:{{getDetailPokemon()?.speed}}
-        <br />
-        Weight:{{getDetailPokemon()?.weight}}
-        <br />
-        Special Attack:{{getDetailPokemon()?.special_attack}}
-        <br />
-        Special Defense:{{getDetailPokemon()?.special_defense}}
-        <br />
+      <h2 class="title-detail">{{ upperFirstLetter(getDetailPokemon()?.nome) }}</h2>
+      <div class="modal-details-container">
+        <img class="imagem-detail" [src]="getDetailPokemon()?.imagem" />
+        <div class="modal-details">
+          HP:{{getDetailPokemon()?.hp}}
+          <br />
+          Attack:{{getDetailPokemon()?.attack}}
+          <br />
+          Defense:{{getDetailPokemon()?.defense}}
+          <br />
+          Speed:{{getDetailPokemon()?.speed}}
+          <br />
+          Weight:{{getDetailPokemon()?.weight}}
+          <br />
+          <br />
+          Special Attack:{{getDetailPokemon()?.special_attack}}
+          <br />
+          Special Defense:{{getDetailPokemon()?.special_defense}}
+          <br />
+        </div>
       </div>
+      
       
     </nav>
   </mat-dialog-content>

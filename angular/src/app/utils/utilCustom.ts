@@ -26,6 +26,6 @@ export const modalColorDictionary = (color: number): string | undefined =>{
     }
     return objToFind[color];
 };
-export const toUpperCase = (name: string): string =>{
-  return name.replace(/^\w/, (match) => match.toUpperCase());
+export const toUpperCase = (name: string | undefined): string =>{
+  return name!.replace(/^\w/, (match) => match.toUpperCase());
 };
