@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# Angular
+angular/dist
+angular/tmp
+angular/out-tsc
+angular/bazel-out
+angular/node_modules
+angular/npm-debug.log
+angular/yarn-error.log

@@ -1,0 +1,28 @@
+<div class="container">
+    <ul class="cards">
+        <!-- <li class="card-red">
+            <p>Pokemon</p> 
+            <img class="imagem" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"/>
+        </li>
+        <li class="card-sunny">Pokemon</li>
+        <li class="card-blue">Pokemon</li>
+        <li class="card-lille">Pokemon</li>
+        <li class="card-purple">Pokemon</li>
+        <li class="card-purple">Pokemon</li>
+        <li class="card-purple">Pokemon</li> -->
+        @for(item of pokemonsArray(); track i; let i = $index){
+            <li (mouseenter)="onMouseEnter(item.rowid)" 
+            (mouseleave)="onMouseLeave(item.rowid)"
+             [ngClass]="changeClass(item.seletor)"
+             (click)="openModal(item)">
+
+            <input type="hidden" [value]="item.rowid"/>
+            <p>{{upperName(item.nome)}}</p>
+            <!-- <img [src]="{isFocused() ? item.gif : item.imagem}" class="imagem" /> -->
+            @if (isFocused[item.rowid]){<img [src]="item.gif" class="imagem" />}
+            @if (!isFocused[item.rowid]){<img [src]="item.imagem" class="imagem" />}
+            <p>{{item.tipo}}</p>
+            </li>
+        }
+    </ul>
+</div>

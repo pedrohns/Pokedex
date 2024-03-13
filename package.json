@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon",
-    "start:frontend":"cd react && npm run dev",
-    "build-dev": "concurrently \"npm start\" \"npm run start:frontend\""
+    "start:frontend": "cd react && npm run dev",
+    "start:frontend-angular": "cd angular && ng s",
+    "build-dev": "concurrently \"npm start\" \"npm run start:frontend\"",
+    "build-dev-angular": "concurrently \"npm start\" \"npm run start:frontend-angular\""
   },
   "repository": {
     "type": "git",
@@ -20,16 +22,20 @@
   },
   "homepage": "https://github.com/pedrohns/Pokedex#readme",
   "dependencies": {
+    "@angular/cli": "^15.2.10",
+    "@angular/core": "^15.2.10",
     "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.1.3",
     "babel": "^6.23.0",
     "body-parser": "^1.20.1",
     "bootstrap": "^5.2.2",
+    "concurrently": "^8.2.2",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.19",
     "react-redux": "^9.0.0",

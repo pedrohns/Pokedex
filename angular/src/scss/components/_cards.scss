@@ -1,0 +1,110 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    // margin: 10 0 0 10;
+    color: var(--black);
+
+    & li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin:3px 3px 3px 3px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        height: 214px;
+        width: 150px;
+        p{
+            line-height: normal;
+        margin: 0;
+        }
+         .imagem {
+                // height: 150px;
+                // object-fit: contain;
+                height: auto; /* Removi a altura fixa para que a imagem não fique distorcida */
+                width: 100%; /* Para garantir que a imagem se ajuste ao contêiner */
+                object-fit: contain; /* Ou object-fit: cover; dependendo do comportamento desejado */
+                margin: 0;
+            
+        }
+    }
+
+    & li:hover{
+        border: hidden;
+    }
+
+    & li.card-red{
+        background-color: #F70D0C;
+    }
+    
+    & li.card-red:hover{
+        background-color: #f07a7a;
+        color:#ffff;
+    }
+    /* 2 */
+    & li.card-green{
+        background-color: #6EF70C;
+    }
+    
+    & li.card-green:hover{
+        background-color: #449907;
+        color:#ffff;
+    }
+    /* 3 */
+    & li.card-blue{
+        background-color: #0754F7;
+    }
+    
+    & li.card-blue:hover{
+        background-color: #163579;
+        color:#ffff;
+    }
+    /* 4 */
+    & li.card-yellow{
+        background-color: #E0D301;
+    }
+    
+    & li.card-yellow:hover{
+        background-color: #f5ec48;
+        color:rgb(160, 132, 132);
+    }
+    /* 5 */
+    & li.card-orange{
+        background-color: #E6D3CD;
+    }
+    
+    & li.card-orange:hover{
+        background-color: #db7658;
+        color:#ffff;
+    }
+    /* 6 */
+    & li.card-purple{
+        background-color: #D85EE6;
+    }
+    
+    & li.card-purple:hover{
+        background-color: #e49dec;
+        color:#ffff;
+    }
+    /* 7 */
+    & li.card-lille{
+        background-color: #C05BFC;
+    }
+    
+    & li.card-lille:hover{
+        background-color: #3f095e;
+        color:#ffff;
+    }
+    /* 8 */
+    & li.card-sunny{
+        background-color: #e6c844;
+    }
+    
+    & li.card-sunny:hover{
+        background-color: #b4a666;
+        color:#ffff;
+    }
+}

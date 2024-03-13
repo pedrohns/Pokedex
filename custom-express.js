@@ -3,18 +3,18 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 var consign = require('consign');
 
-module.exports = function() {
+module.exports = function () {
     var app = express();
     app.use(cors({
         origin: "*",
-        credentials : true
+        credentials: true
     }));
     app.use(express.static('./react'));
     app.use(bodyParser.json());
-    app.use(express.urlencoded({extended:true}));
+    app.use(express.urlencoded({ extended: true }));
     consign()
         .include('./routes')
-        .include('./modules')
+        // .include('./modules')
         .into(app)
     return app;
 };

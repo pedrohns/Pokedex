@@ -1,0 +1,7 @@
+<!-- [style.height.px]="isLoading ? 35 : null" -->
+<div class="container">
+    <button class="btn" 
+    (click)="generatePokemons()" 
+    [disabled]="isLoading"
+    >{{buttonText}}</button>
+</div>
